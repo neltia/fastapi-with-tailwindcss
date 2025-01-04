@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Search Results</title>
+  <!-- Dynamically generate the URL for the "output.css" file located in the "static" folder -->
+  <link rel="stylesheet" href="{{url_for('static', path='output.css')}}"/>
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+  <!-- Container -->
+  <div class="container mx-auto p-4">
+    <!-- Search Bar -->
+    <div class="mb-6">
+      <form class="relative">
+        <input
+          type="text"
+          placeholder="Search blog posts..."
+          class="w-full px-4 py-3 bg-gray-800 text-gray-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none placeholder-gray-500"
+        />
+        <button
+          type="submit"
+          class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 focus:ring-2 focus:ring-cyan-500"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Example Blog Post -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="Blog Image"
+          class="w-full h-40 object-cover rounded-t-lg mb-4"
+        />
+        <h2 class="text-lg font-semibold mb-2">Blog Post Title</h2>
+        <p class="text-gray-400 text-sm">
+          A brief description of the blog post goes here. This is a placeholder for content.
+        </p>
+        <a
+          href="#"
+          class="block mt-4 text-cyan-500 hover:underline"
+        >
+          Read more →
+        </a>
+      </div>
+
+      <!-- Repeat for more results -->
+      <div class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <img
+          src="https://via.placeholder.com/300x200"
+          alt="Blog Image"
+          class="w-full h-40 object-cover rounded-t-lg mb-4"
+        />
+        <h2 class="text-lg font-semibold mb-2">Another Blog Post</h2>
+        <p class="text-gray-400 text-sm">
+          Another short description for the blog post. The content is informative.
+        </p>
+        <a
+          href="#"
+          class="block mt-4 text-cyan-500 hover:underline"
+        >
+          Read more →
+        </a>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+</body>
+</html>
